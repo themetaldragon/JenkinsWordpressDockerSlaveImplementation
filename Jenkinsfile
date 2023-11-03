@@ -1,7 +1,7 @@
 pipeline {
       agent {
             node {
-                  label 'newnode'
+                  label 'slave-node'
             }
       }
       environment { 
