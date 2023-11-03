@@ -1,7 +1,7 @@
 pipeline {
       agent {
             docker {
-                  image 'nishant488/docker-slave-agent'
+                  image 'nishant488/docker-slave-agent:myfirstimagepush'
             }
       }
       environment { 
