@@ -1,7 +1,7 @@
 pipeline {
       agent {
             docker {
-                  label 'build'
+                  image 'nishant488/docker-slave-agent'
             }
       }
       environment { 
