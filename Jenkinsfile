@@ -1,5 +1,9 @@
 pipeline {
-      agent 'newnode'
+      agent {
+            node {
+                  label 'newnode'
+            }
+      }
       environment { 
    NAME = "abc"
    VERSION = "${env.BUILD_ID}"
