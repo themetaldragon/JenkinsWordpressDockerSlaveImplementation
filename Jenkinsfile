@@ -1,9 +1,5 @@
 pipeline {
-      agent {
-            docker {
-                  image 'nishant488/docker-slave-agent:myfirstimagepush'
-            }
-      }
+      agent 'newnode'
       environment { 
    NAME = "abc"
    VERSION = "${env.BUILD_ID}"
