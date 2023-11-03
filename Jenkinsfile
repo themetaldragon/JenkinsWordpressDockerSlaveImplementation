@@ -1,5 +1,9 @@
 pipeline {
-      agent any
+      agent {
+            docker {
+                  label ''
+            }
+      }
       environment { 
    NAME = "abc"
    VERSION = "${env.BUILD_ID}"
