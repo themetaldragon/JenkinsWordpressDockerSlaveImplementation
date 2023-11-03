@@ -1,7 +1,7 @@
 pipeline {
       agent {
             docker {
-                  label ''
+                  label 'build'
             }
       }
       environment { 
@@ -12,13 +12,13 @@ pipeline {
       stages {
                 
           stage ('Build') {
-               agent any  
+               
                steps {
                       sh 'docker build -f Dockerfile -t ${NAME}:${VERSION} .'
                         }
               }
           stage ('Push') {
-                agent any
+             
                 
                 steps {
                       sh 'docker tag ${NAME}:${VERSION} localhost:5000/${NAME}:${VERSION}'
@@ -27,7 +27,7 @@ pipeline {
           }
       
     stage ('cleanup2') {
-              agent any
+              
               steps {
               sh 'docker rmi localhost:5000/${NAME}:${VERSION}'
               }
