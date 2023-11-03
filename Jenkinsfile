@@ -22,7 +22,7 @@ pipeline {
                 
                 steps {
                       sh 'docker tag ${NAME}:${VERSION} localhost:5000/${NAME}:${VERSION}'
-                      sh  'docker push localhost:5000/${NAME}:${VERSION}'
+                      sh  'docker push 103.189.173.107:5000/${NAME}:${VERSION}'
                      }
           }
       
